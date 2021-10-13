@@ -43,6 +43,10 @@ namespace LuckyMIlko.Models
         [StringLength(60, MinimumLength =2, ErrorMessage ="el nombre debe estar entre 2 y 60 letras")]
         public string Nombre { get; set; }
 
+        [Required(ErrorMessage = "El link de la foto de la suerte es requerido")]
+        [StringLength(100, MinimumLength = 2, ErrorMessage = "el link debe estar entre 2 y 100 letras")]
+        public string Link { get; set; }
+
         public Suertetype Suertes { get; set; }
 
 
